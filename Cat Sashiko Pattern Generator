@@ -1,0 +1,49 @@
+# File: PR2.py
+X_REPEAT = 6
+Y_REPEAT = 4
+print("Cat Sashiko Pattern Generator")
+print("Choose a pattern")
+user_input = input("HappyCat, Wowcat, or SadCat? (H/W/S): ").strip().upper()
+print("")
+
+if user_input == "H":
+    print("You chose HappyCat!")
+    print("")
+    for i in range(Y_REPEAT):
+        for j in range(X_REPEAT):
+            if (i + j) % 2 == 0:
+                print("|>^-^<|", end=" ")
+            else:
+                print("----^", end=" ")
+    print()  # New line after each row
+
+elif user_input == "W":
+    print("You chose Wowcat!")
+    print("")
+    for i in range(Y_REPEAT):
+        for j in range(X_REPEAT):
+            if (i + j) % 2 == 0:
+                print("|>^@^<|", end=" ")
+            else:
+                print("^----^", end=" ")
+    print()
+
+elif user_input == "S":
+    print("You chose SadCat!")
+    print("")
+    for i in range(Y_REPEAT):
+        for j in range(X_REPEAT):
+            if (i + j) % 2 == 0:
+                print("|>o~o<|", end=" ")
+            else:
+                print("^----^", end=" ")
+    print()
+
+else:
+    print("Invalid choice! Please choose H, W, or S.")
+# End of code
+# This code generates a simple Sashiko pattern using nested loops.
+# The pattern alternates between "X" and "O" based on the sum of the
+# row and column indices, creating a checkerboard effect.
+# The pattern is repeated for a specified number of rows (Y_REPEAT)
+# and columns (X_REPEAT).
